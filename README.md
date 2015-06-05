@@ -3,9 +3,9 @@ A simple and effective environment created to collect data from honeypots (kippo
 
 ## **INSTALL**
 
-1. - edit 'honeystats.cfg' with your needs
-2. - copy 'www' content into your www-root apache directory (this is the site, change it as you want)
-3. - launch 'mainstats.sh' and 'slowquery.sh'
+1. edit 'honeystats.cfg' with your needs
+2. copy 'www' content into your www-root apache directory (this is the site, change it as you want)
+3. launch 'mainstats.sh' and 'slowquery.sh'
  or
 4. - edit your crontab as in the first line of .sh files to keep your stats updated
 
