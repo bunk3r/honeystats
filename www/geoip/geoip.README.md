@@ -1,0 +1,2 @@
+- downloaded geoip.inc - [https://github.com/maxmind/geoip-api-php/blob/master/src/]
+- downloaded GeoIP.dat - [http://dev.maxmind.com/geoip/legacy/geolite/]
