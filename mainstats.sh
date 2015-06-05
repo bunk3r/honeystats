@@ -23,7 +23,7 @@ cd $app/stats
 /bin/rm -f $app/stats/glastopf_top15files.txt.tmp
 echo "[i] creating 'glastopf_top15files.txt.tmp'"
 /usr/bin/mysql --user=$mysqluser --password=$mysqlpass --database=$glastodb --execute="SELECT COUNT(filename), filename FROM events GROUP BY filename ORDER BY COUNT(filename) DESC LIMIT 15 into outfile '/`echo $app`/stats/glastopf_top15files.txt.tmp';"
-/bin/mv glastopf_top15files.txt.tmp glastopf_top15files.txt
+/bin/mv $app/stats/glastopf_top15files.txt.tmp $app/stats/glastopf_top15files.txt
 
 
 #
@@ -119,6 +119,12 @@ echo "[i] creating 'live_users.txt.tmp'"
 #
 #cp -r $app/stats/*.txt $mnt/stats
 #chmod --recursive 777 $mnt/stats
+
+#
+# COPY TXT TO WWW
+#
+#cp -r $app/stats/*.txt $www/stats
+#chmod --recursive 777 $www/stats
 
 echo "[i] applying 777 to stats dir ($app/stats)"
 /bin/chmod --recursive 777 $app/stats
