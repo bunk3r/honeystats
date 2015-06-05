@@ -1,5 +1,5 @@
 # honeystats
-A simple and effective environment created to collect data from honeypots (kippo, glastopf, etc.) and publish them online (php + apache)
+A simple and effective environment created to collect data from honeypots (kippo, glastopf, etc.) and publish them online (php)
 
 ## **INSTALL**
 
