@@ -3,6 +3,7 @@
 # CRONTAB SETTINGS (every 30 minutes)
 # 0,30 * * * * /opt/honeystats/mainstats.sh
 #
+
 MY_DIR=$(dirname $(readlink -f $0))
 . $MY_DIR/honeystats.cfg
 
