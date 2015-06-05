@@ -117,8 +117,8 @@ echo "[i] creating 'live_users.txt.tmp'"
 #
 # COPY TXT TO FTP
 #
-cp -r $app/stats/*.txt $mnt/stats
-chmod --recursive 777 $mnt/stats
+#cp -r $app/stats/*.txt $mnt/stats
+#chmod --recursive 777 $mnt/stats
 
 echo "[i] applying 777 to stats dir ($app/stats)"
 /bin/chmod --recursive 777 $app/stats
