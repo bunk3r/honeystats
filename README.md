@@ -12,3 +12,6 @@ A simple and effective environment created to collect data from honeypots (kippo
 ## **NOTICE**
 
 you can automount with fuse a remote ftp/ssh server (your web hosting server, for example) and use it with honeystats  (you can edit the mountpoint in the .cfg and remove comments from FTP/SSH parts into the .sh files)
+
+* slowquery.sh - this is the file for the very slow queries (e.g. kippo passwords)
+* mainstats.sh - all other queries
