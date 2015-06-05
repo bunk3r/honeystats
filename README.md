@@ -7,11 +7,11 @@ A simple and effective environment created to collect data from honeypots (kippo
 2. copy 'www' content into your www-root apache directory (this is the site, change it as you want)
 3. launch 'mainstats.sh' and 'slowquery.sh'
  or
-4. edit your crontab as in the first line of .sh files to keep your stats updated
+4. edit your crontab as in the first lines of .sh files to keep your stats updated
 
 ## **NOTICE**
 
-you can automount with fuse a remote ftp/ssh server (your web hosting server, for example) and use it with honeystats  (you can edit the mountpoint in the .cfg and remove comments from FTP/SSH parts into the .sh files)
+you can automount with fuse a remote ftp/ssh server (e.g. your web hosting server) and use it with honeystats (you can edit the mountpoint in the .cfg and remove comments from FTP/SSH parts into the .sh files)
 
 * slowquery.sh - this is the file for the very slow queries (e.g. kippo passwords)
 * mainstats.sh - all other queries
