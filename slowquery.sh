@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # CRONTAB SETTINGS (every day at 2:30 AM)
-# 30 2 * * * /opt/honeystats/password.sh
+# 30 2 * * * /opt/honeystats/slowquery.sh
 #
 MY_DIR=$(dirname $(readlink -f $0))
 . $MY_DIR/honeystats.cfg
