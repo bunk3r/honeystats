@@ -7,7 +7,7 @@ MY_DIR=$(dirname $(readlink -f $0))
 . $MY_DIR/honeystats.cfg
 
 if [ ! -d "$app/stats" ]; then
-  echo "[!] stats directory doesn't exists ($app/stats):\t let's create it!"
+  echo "[!] stats directory doesn't exists ($app/stats): creating"
   /bin/mkdir $app/stats
   /bin/chmod --recursive 777 $app/stats
 fi
