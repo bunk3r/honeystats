@@ -97,19 +97,19 @@ $gi = geoip_open("geoip/GeoIP.dat",GEOIP_STANDARD);
 		</ul>
 	</nav>
 	
-		
+	<!--	
 	<div class="social">
 		<a class="icon-link round-corner facebook fill" href="https://www.facebook.com/purificato.org" target="_blank"><i class="fa fa-facebook"></i></a>
 		<a class="icon-link round-corner linkedin fill" href="https://it.linkedin.com/in/andreapurificato" target="_blank"><i class="fa fa-linkedin"></i></a>
 		<a class="icon-link round-corner twitter fill" href="https://twitter.com/purificato_org" target="_blank"><i class="fa fa-twitter"></i></a>
 		<a class="icon-link round-corner google-plus fill" href="https://www.google.com/+PurificatoOrgEthicalHack" target="_blank"><i class="fa fa-google-plus"></i></a>
-		<!--<a class="icon-link round-corner github fill"><i class="fa fa-github"></i></a>-->
 	</div>
-		
+	-->	
 	
 	<footer>
 		
-		<p></p>
+	<p>HAND MADE &copy; Andrea Purificato - <a href="http://www.purificato.org" target="_blank">www.purificato.org</a></p>
+	<p><a href="https://github.com/bunk3r/honeystats" target="_blank">HoneyStats project on Github</a></p>
 
 	</footer>
 
