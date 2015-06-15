@@ -45,9 +45,9 @@ echo "[i] creating 'kippo_top15userpass.txt.tmp'"
 #
 # COPY TXT AND TAR TO WWW
 #
-#cp -r $app/stats/*.txt $www/stats
-#cp -r $app/stats/*.tar.gz $www/stats
-#chmod --recursive 777 $www/stats
+cp -r $app/stats/*.txt $www/stats
+cp -r $app/stats/*.tar.gz $www/stats
+chmod --recursive 777 $www/stats
 
 echo "[i] applying 777 to stats dir ($app/stats)"
 /bin/chmod --recursive 777 $app/stats
