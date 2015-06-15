@@ -124,8 +124,8 @@ echo "[i] creating 'live_users.txt.tmp'"
 #
 # COPY TXT TO WWW
 #
-#cp -r $app/stats/*.txt $www/stats
-#chmod --recursive 777 $www/stats
+cp -r $app/stats/*.txt $www/stats
+chmod --recursive 777 $www/stats
 
 echo "[i] applying 777 to stats dir ($app/stats)"
 /bin/chmod --recursive 777 $app/stats
