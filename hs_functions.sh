@@ -13,7 +13,7 @@ function hs_perm {
 function copy2 {
 	hs_perm $2
 	echo "[i] cp $app/stats/*.$1 to $2/stats"
-	cp -r $app/stats/*.txt $2/stats
+	cp -r $app/stats/*.$1 $2/stats
 	hs_perm $2
 }
 
