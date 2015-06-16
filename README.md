@@ -6,7 +6,7 @@ A simple and effective environment created to collect data from honeypots (kippo
 * cd /opt
 * git clone git://github.com/bunk3r/honeystats.git
 
-1. edit 'honeystats.cfg' with your needs (cp honeystats.cfg to honeystats.cfg)
+1. edit 'honeystats.cfg' with your needs (cp honeystats.cfg.dist to honeystats.cfg)
 2. copy 'www' content into your www-root apache directory (this is the site, change it as you want)
 3. launch 'mainstats.sh' and 'slowquery.sh'
  or
