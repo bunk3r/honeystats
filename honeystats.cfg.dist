@@ -1,0 +1,38 @@
+########################
+#
+# Honeystats config
+#
+########################
+#
+# path to local www root
+#
+www=/var/www/honeystats
+#
+# path of honeystats
+#
+app=/opt/honeystats
+#
+# path to fuse ftp / ssh filesystem
+#
+mnt=/mnt/yourdomain/yourpath
+#
+# mysql root
+#
+mysqluser=root
+mysqlpass=mysqlpass
+#
+# kippo cfg
+#
+kippodb=kippo
+# 
+# will be used ASAP
+#kippouser=kippo
+#kippopass=kippopass
+#
+# glastopf cfg
+#
+glastodb=glastopf
+#
+# will be used ASAP
+#glastuser=glastopf
+#glastpass=glastopass
