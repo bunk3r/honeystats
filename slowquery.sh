@@ -13,6 +13,7 @@ cd $app/stats
 #
 # LIVE DICT PASSWORD (SLOW)
 #
+/bin/rm -f live_dict.txt.tar.gz
 hs_select 'kippo' 'live_dict.txt' 'select distinct password from auth order by password ASC'
 /bin/tar -czf live_dict.txt.tar.gz live_dict.txt
 /bin/rm -f live_dict.txt
