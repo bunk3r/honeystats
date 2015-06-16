@@ -34,7 +34,7 @@ function hs_select {
 }
 
 if [ ! -d "$app/stats" ]; then
-  echo "[!] stats directory doesn't exists ($app/stats):\t let's create it!"
+  echo "[!] stats directory doesn't exists ($app/stats): let's create it!"
   /bin/mkdir $app/stats
   hs_perm $app
 fi
