@@ -25,12 +25,13 @@ hs_select 'kippo' 'kippo_top15userpass.txt' 'SELECT username,password,count(*) A
 #
 # COPY TXT+TGZ TO FTP
 #
-copy2 txt $mnt
-copy2 tar.gz $mnt
+#copy2 txt $mnt
+#copy2 tar.gz $mnt
 
 #
 # COPY TXT TO WWW
 #
 copy2 txt $www
+copy2 tar.gz $www
 
 hs_perm $app

@@ -24,7 +24,7 @@ hs_select 'glastopf' 'glastopf_wpattackslist.txt' "SELECT id,time,pattern, sourc
 #
 # COPY TXT TO FTP
 #
-copy2 txt $mnt
+#copy2 txt $mnt
 
 #
 # COPY TXT TO WWW

@@ -73,7 +73,7 @@ hs_select 'kippo' 'live_users.txt' 'select distinct username from auth order by 
 #
 # COPY TXT TO FTP
 #
-copy2 txt $mnt
+#copy2 txt $mnt
 
 #
 # COPY TXT TO WWW
