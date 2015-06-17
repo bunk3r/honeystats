@@ -39,8 +39,8 @@ hs_select 'kippo' 'kippo_top20successlogin.txt' 'SELECT COUNT(sessions.ip) AS co
 #
 # COPY TXT+TGZ TO FTP
 #
-copy2 txt $mnt
-copy2 tar.gz $mnt
+#copy2 txt $mnt
+#copy2 tar.gz $mnt
 
 #
 # COPY TXT TO WWW
