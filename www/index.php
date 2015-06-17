@@ -51,8 +51,9 @@ $gi = geoip_open("geoip/GeoIP.dat",GEOIP_STANDARD);
 <article>		
 	<h2>Live Dictionaries</h2>
 	<ul>
-		<li>You can download a <i>collection</i> of passwords extracted from SSH attacks <a href="stats/live_dict.txt.tar.gz" target="_blank">HERE</a></li>
-		<li>You can download a <i>collection</i> of users exctracted from SSH attacks <a href="stats/live_users.txt" target="_blank">HERE</a></li>
+		<li><a href="stats/live_dict.txt.tar.gz" target="_blank">live_dict.txt.tar.gz</a> (updated: <?php echo date ("F d Y H:i:s", filemtime('stats/live_dict.txt.tar.gz')); ?>)</li>
+		<li><a href="stats/live_users.txt" target="_blank">live_users.txt</a> (updated: <?php echo date ("F d Y H:i:s", filemtime('stats/live_users.txt')); ?>)</li>
+		<li><a href="stats/live_userpass_dict.txt.tar.gz" target="_blank">live_userpass_dict.txt.tar.gz</a> (updated: <?php echo date ("F d Y H:i:s", filemtime('stats/live_userpass_dict.txt.tar.gz')); ?>)</li>
 	</ul>
 </article>
 

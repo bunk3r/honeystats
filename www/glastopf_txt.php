@@ -6,6 +6,9 @@
   
 <?php
 $file = 'stats/glastopf_last20events.txt';
+
+if ( file_exists($file) ) {
+
 $data = file($file) or die('Could not read file!');
 
 // LAST 20 EVENTS
@@ -29,7 +32,10 @@ echo '
 	</tr>';
 	}
 echo '</table>';
-
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+}
 
 
 
@@ -43,6 +49,9 @@ echo '</table>';
 echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/glastopf_top15ip.txt';
+
+if ( file_exists($file) ) {
+
 $data = file($file) or die('Could not read file!');
 
 // TOP 15 IPs
@@ -71,7 +80,10 @@ foreach ($data as $line) {
 
 echo "
 </table>";
-
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+}
 
 
 
@@ -91,6 +103,9 @@ echo "
 echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/glastopf_top15ext.txt';
+
+if ( file_exists($file) ) {
+
 $data = file($file) or die('Could not read file!');
 
 // TOP 15 EXT
@@ -112,7 +127,10 @@ foreach ($data as $line) {
 	}
 
 echo "</table>";
-
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+}
 
 
 
@@ -131,6 +149,9 @@ echo "</table>";
 echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/glastopf_top15intitle.txt';
+
+if ( file_exists($file) ) {
+
 $data = file($file) or die('Could not read file!');
 
 // TOP 15 INTITLE
@@ -152,7 +173,10 @@ foreach ($data as $line) {
 	}
 
 echo "</table>";
-
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+}
 
 
 
@@ -168,6 +192,9 @@ echo "</table>";
 echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/glastopf_top15intext.txt';
+
+if ( file_exists($file) ) {
+
 $data = file($file) or die('Could not read file!');
 
 // TOP 15 INTEXT
@@ -189,7 +216,10 @@ foreach ($data as $line) {
 	}
 
 echo "</table>";
-
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+}
 
 
 
@@ -203,6 +233,9 @@ echo "</table>";
 echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/glastopf_top15inurl.txt';
+
+if ( file_exists($file) ) {
+
 $data = file($file) or die('Could not read file!');
 
 // TOP 15 INTEXT
@@ -224,7 +257,10 @@ foreach ($data as $line) {
 	}
 
 echo "</table>";
-
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+}
 
 
 

@@ -4,6 +4,9 @@
 
 <?php
 $file = 'stats/glastopf_top15files.txt';
+
+if ( file_exists($file) ) {
+
 $data = file($file) or die('Could not read file!');
 
 // TOP 15 FILES
@@ -22,7 +25,10 @@ foreach ($data as $line) {
 		</tr>';
 	}
 echo '</table>';
-
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+}
 echo "<p style=\"clear: left;\"></p>";
 
 
@@ -35,6 +41,9 @@ echo "<p style=\"clear: left;\"></p>";
 
 
 $file = 'stats/mfiles.txt';
+
+if ( file_exists($file) ) {
+
 $data = file($file) or die('Could not read file!');
 
 // FILES
@@ -68,6 +77,10 @@ foreach ($data as $line) {
 
 
 echo '</table>';
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+}
 echo "<p style=\"clear: left;\"></p>";
 
 ?>
