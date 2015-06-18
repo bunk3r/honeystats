@@ -7,38 +7,52 @@
 <?php
 $file = 'stats/kippo_top15userpass.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
-	$data = file($file);
-	// TOP 15 user pass
-	echo '<table class="tablefit"><caption>TOP 15 USER+PASS</caption><tr><th>Count</th><th>Username</th><th>Password</th></tr>';
+$data = file($file) or die('k1');
 
-	foreach ($data as $line) {
+// TOP 15 user pass
+echo '<table class="tablefit"><caption>TOP 15 USER+PASS</caption><tr><th>Count</th><th>Username</th><th>Password</th></tr>';
 
-			list($user,$pass,$count) = explode("\t",$line);
+foreach ($data as $line) {
 
-			echo "<tr><td>" . $count . "</td>";
-			echo "<td>";
-			echo htmlentities( $user );
-			echo "</td>";
-			echo "<td>";
-			echo htmlentities( $pass );
-			echo "</td>";
-			echo "</tr>";
-	}
-	echo "</table>";
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+        list($user,$pass,$count) = explode("\t",$line);
+
+        echo "<tr><td>" . $count . "</td>";
+		echo "<td>";
+		echo htmlentities( $user );
+        echo "</td>";
+        echo "<td>";
+        echo htmlentities( $pass );
+        echo "</td>";
+        echo "</tr>";
 }
+echo "</table>";
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
+}
+clearstatcache(); 
+echo "<p style=\"clear: left;\"></p>";
+
+
+
+
+
+
+
+
+
 
 
 
 
 $file = 'stats/kippo_top20successlogin.txt';
 
-if ( file_exists($file) ) {
-$data = file($file) or die('Could not read file!');
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
+
+$data = file($file) or die('k2');
 
 // TOP 20 successful login IPs 
 echo '<table class="tablefit"><caption>TOP 20 SUCCESSFUL LOGIN IPs</caption><tr><th>Count</th><th colspan="2">Source</th></tr>';
@@ -50,16 +64,24 @@ foreach ($data as $line) {
 		echo "<td>";
         iplink( $ip );
         echo "</td>";
-        echo "<td style=\"white-space:nowrap;\">";
+        echo "<td>";
         echo geoip_country_name_by_addr ( $gi, trim($ip) );
 	echo "</td>";
 	echo "</tr>";
 }
 echo "</table>";
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
+clearstatcache(); 
+echo "<p style=\"clear: left;\"></p>";
+
+
+
+
+
+
+
 
 
 
@@ -69,9 +91,10 @@ echo "</table>";
 
 $file = 'stats/kippo_top20ip.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
-$data = file($file) or die('Could not read file!');
+$data = file($file) or die('k3');
 
 // TOP 20 IPs
 echo '<table class="tablefit"><caption>TOP 20 attackers</caption><tr><th>Connections</th><th colspan="2">Source</th></tr>';
@@ -84,22 +107,43 @@ foreach ($data as $line) {
 	echo "<td>";
         iplink( $ip );
         echo "</td>";
-        echo "<td style=\"white-space:nowrap;\">";
+        echo "<td>";
         echo geoip_country_name_by_addr ( $gi, trim($ip) );
 	echo "</td>";
         echo "</tr>";
 }
 echo "</table>";
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
+clearstatcache(); 
+echo "<p style=\"clear: left;\"></p>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $file = 'stats/kippo_last20sess.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
-$data = file($file) or die('Could not read file!');
+$data = file($file) or die('k4');
 
 // Last 20 sessions
 echo '<table class="tablefit"><caption>Last 20 sessions</caption><tr><th>Date</th><th colspan="2">Source</th></tr>';
@@ -114,26 +158,31 @@ foreach ($data as $line) {
 	echo "<td>";
         iplink( $ip );
         echo "</td>";
-        echo "<td style=\"white-space:nowrap;\">";
+        echo "<td>";
         echo geoip_country_name_by_addr ( $gi, trim($ip) );
 	echo "</td>";
 	echo "</tr>";
 }
 echo "</table>";
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
+clearstatcache(); 
 echo "<p style=\"clear: left;\"></p>";
+
+
+
+
 
 
 
 
 $file = 'stats/kippo_last50commands.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
-$data = file($file) or die('Could not read file!');
+$data = file($file) or die('k5');
 
 echo '<table class="tablefit"><caption>Last 50 commands executed</caption><tr><th>Date</th><th>Command</th><th colspan="2">Source</th></tr>';
 
@@ -153,13 +202,16 @@ echo "</td>";
 	echo "</tr>";
 }
 echo '</table>';
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
-
+clearstatcache(); 
 echo "<p style=\"clear: left;\"></p>";
 
-?>
 
+
+
+
+?>
+<p><a href="#home">^ Top</a></p>
 </div>

@@ -7,7 +7,8 @@
 <?php
 $file = 'stats/glastopf_last20events.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
 $data = file($file) or die('Could not read file!');
 
@@ -32,25 +33,24 @@ echo '
 	</tr>';
 	}
 echo '</table>';
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
-
-
-
-
-
-
-
-
-
-
+clearstatcache(); 
 echo "<p style=\"clear: left;\"></p>";
+
+
+
+
+
+
+
+
 
 $file = 'stats/glastopf_top15ip.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
 $data = file($file) or die('Could not read file!');
 
@@ -80,11 +80,11 @@ foreach ($data as $line) {
 
 echo "
 </table>";
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
-
+clearstatcache(); 
+echo "<p style=\"clear: left;\"></p>";
 
 
 
@@ -100,11 +100,11 @@ echo "
 
 
 // OTHER 1
-echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/glastopf_top15ext.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
 $data = file($file) or die('Could not read file!');
 
@@ -127,12 +127,11 @@ foreach ($data as $line) {
 	}
 
 echo "</table>";
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
-
-
+clearstatcache(); 
+echo "<p style=\"clear: left;\"></p>";
 
 
 
@@ -146,11 +145,11 @@ echo "</table>";
 
 
 // OTHER 1
-echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/glastopf_top15intitle.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
 $data = file($file) or die('Could not read file!');
 
@@ -173,11 +172,11 @@ foreach ($data as $line) {
 	}
 
 echo "</table>";
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
-
+clearstatcache(); 
+echo "<p style=\"clear: left;\"></p>";
 
 
 
@@ -189,11 +188,11 @@ echo "</table>";
 
 
 // OTHER 1
-echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/glastopf_top15intext.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
 $data = file($file) or die('Could not read file!');
 
@@ -216,11 +215,11 @@ foreach ($data as $line) {
 	}
 
 echo "</table>";
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
-
+clearstatcache(); 
+echo "<p style=\"clear: left;\"></p>";
 
 
 
@@ -230,11 +229,11 @@ echo "</table>";
 
 
 // OTHER 1
-echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/glastopf_top15inurl.txt';
 
-if ( file_exists($file) ) {
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
 
 $data = file($file) or die('Could not read file!');
 
@@ -257,26 +256,14 @@ foreach ($data as $line) {
 	}
 
 echo "</table>";
-	clearstatcache();
-} else {
-	echo "Could not read file: ".$file;
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// OTHER 1
+clearstatcache(); 
 echo "<p style=\"clear: left;\"></p>";
+
+
+
 ?>
-
-
+<p><a href="#home">^ Top</a></p>
 </div>
