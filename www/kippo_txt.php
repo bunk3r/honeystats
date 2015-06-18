@@ -10,8 +10,6 @@ $file = 'stats/kippo_top15userpass.txt';
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
 
-$data = file($file) or die('k1');
-
 // TOP 15 user pass
 echo '<table class="tablefit"><caption>TOP 15 USER+PASS</caption><tr><th>Count</th><th>Username</th><th>Password</th></tr>';
 
@@ -30,8 +28,7 @@ foreach ($data as $line) {
 }
 echo "</table>";
 	} else { echo 'Could not read file:'.$file; }
-} else { echo "no file: ".$file;
-}
+} else { echo "no file: ".$file; }
 clearstatcache(); 
 echo "<p style=\"clear: left;\"></p>";
 
@@ -51,8 +48,6 @@ $file = 'stats/kippo_top20successlogin.txt';
 
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
-
-$data = file($file) or die('k2');
 
 // TOP 20 successful login IPs 
 echo '<table class="tablefit"><caption>TOP 20 SUCCESSFUL LOGIN IPs</caption><tr><th>Count</th><th colspan="2">Source</th></tr>';
@@ -93,8 +88,6 @@ $file = 'stats/kippo_top20ip.txt';
 
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
-
-$data = file($file) or die('k3');
 
 // TOP 20 IPs
 echo '<table class="tablefit"><caption>TOP 20 attackers</caption><tr><th>Connections</th><th colspan="2">Source</th></tr>';
@@ -143,8 +136,6 @@ $file = 'stats/kippo_last20sess.txt';
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
 
-$data = file($file) or die('k4');
-
 // Last 20 sessions
 echo '<table class="tablefit"><caption>Last 20 sessions</caption><tr><th>Date</th><th colspan="2">Source</th></tr>';
 
@@ -181,8 +172,6 @@ $file = 'stats/kippo_last50commands.txt';
 
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
-
-$data = file($file) or die('k5');
 
 echo '<table class="tablefit"><caption>Last 50 commands executed</caption><tr><th>Date</th><th>Command</th><th colspan="2">Source</th></tr>';
 

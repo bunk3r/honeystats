@@ -8,8 +8,6 @@ $file = 'stats/glastopf_top15files.txt';
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
 
-$data = file($file) or die('Could not read file:'.$file);
-
 // TOP 15 FILES
 echo '<table class="tablefit"><caption>TOP 15 MALWARE</caption><tr><th>Count</th><th>File</th></tr>';
 

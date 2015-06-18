@@ -10,8 +10,6 @@ $file = 'stats/glastopf_last20events.txt';
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
 
-$data = file($file) or die('Could not read file!');
-
 // LAST 20 EVENTS
 echo '
 <table class="tablefit">
@@ -51,8 +49,6 @@ $file = 'stats/glastopf_top15ip.txt';
 
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
-
-$data = file($file) or die('Could not read file!');
 
 // TOP 15 IPs
 echo '
@@ -106,8 +102,6 @@ $file = 'stats/glastopf_top15ext.txt';
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
 
-$data = file($file) or die('Could not read file!');
-
 // TOP 15 EXT
 echo '
 <table class="tablefit">
@@ -151,8 +145,6 @@ $file = 'stats/glastopf_top15intitle.txt';
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
 
-$data = file($file) or die('Could not read file!');
-
 // TOP 15 INTITLE
 echo '
 <table class="tablefit">
@@ -194,8 +186,6 @@ $file = 'stats/glastopf_top15intext.txt';
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
 
-$data = file($file) or die('Could not read file!');
-
 // TOP 15 INTEXT
 echo '
 <table class="tablefit">
@@ -234,8 +224,6 @@ $file = 'stats/glastopf_top15inurl.txt';
 
 if ( file_exists($file) ) { 
 	if ( $data = file($file) ) { 
-
-$data = file($file) or die('Could not read file!');
 
 // TOP 15 INTEXT
 echo '
