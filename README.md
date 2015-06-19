@@ -1,6 +1,10 @@
 # honeystats
 A simple and effective environment created to collect data from honeypots (kippo, glastopf, etc.) and publish them online (php)
 
+You can find a fresh install of the 'www' part of the framework here: http://nowhere.purificato.org:65000/
+
+I'm currently use HoneyStats as part of my site: http://purificato.org/honeypot.php
+
 ## **INSTALL**
 
 * cd /opt
