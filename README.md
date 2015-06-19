@@ -23,3 +23,16 @@ you can automount with fuse a remote ftp/ssh server (e.g. your web hosting serve
 * slowquery.sh - this is the file for the very slow queries (e.g. kippo passwords)
 * mainstats.sh - all other queries
 * wp-hs.sh - wordpress related attacks stats (only txt files, not yet included in www)
+
+
+## **TO DO**
+
+1. Integrate wp-sh (wordpress related attacks) into presentation
+2. Add graphic charts to the site
+2. Manage other queries (web attacks, list of wget commands, etc)
+4. Change layout presentation (www) to manage more tables with better look
+5. Optimize code and structure of the framework
+
+## **MAYBE**
+
+1. Add other presentation layouts (twitter bot?)
