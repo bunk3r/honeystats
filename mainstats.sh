@@ -18,7 +18,8 @@ hs_select 'glastopf' 'glastopf_top15files.txt' "SELECT COUNT(filename), filename
 #
 # GLASTOPF ALL MALWARE FILES
 #
-hs_select 'glastopf' 'mfiles.txt' "SELECT LEFT (source, LOCATE (':', source)-1) AS IP, filename, SUBSTRING_INDEX(request_url,'http',-1) as s FROM events WHERE filename is not null GROUP BY filename,IP,s order by s,filename,IP ASC"
+hs_select 'glastopf' 'mfiles.txt' "SELECT LEFT (source, LOCATE (':', source)-1) AS IP, filename, SUBSTRING_INDEX(request_url,'http',-1) as s FROM events WHERE filename is not null GROUP BY filename"
+#"SELECT LEFT (source, LOCATE (':', source)-1) AS IP, filename, SUBSTRING_INDEX(request_url,'http',-1) as s FROM events WHERE filename is not null GROUP BY filename,IP,s order by s,filename,IP ASC"
 
 #
 # KIPPO TOP 20 IP
