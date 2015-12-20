@@ -22,6 +22,11 @@ hs_select 'glastopf' 'mfiles.txt' "SELECT LEFT (source, LOCATE (':', source)-1) 
 #"SELECT LEFT (source, LOCATE (':', source)-1) AS IP, filename, SUBSTRING_INDEX(request_url,'http',-1) as s FROM events WHERE filename is not null GROUP BY filename,IP,s order by s,filename,IP ASC"
 
 #
+# KIPPO WGET
+#
+hs_select 'kippo' 'kippo_wget.txt' "SELECT DISTINCT(input) FROM input WHERE input LIKE '%wget%' AND input NOT LIKE 'wget' ORDER BY timestamp DESC"
+
+#
 # KIPPO TOP 20 IP
 #
 hs_select 'kippo' 'kippo_top20ip.txt' 'select count(ip) as count, ip from sessions group by ip order by count desc limit 20'

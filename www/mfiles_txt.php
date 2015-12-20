@@ -79,7 +79,52 @@ if ( file_exists($file) ) {
 clearstatcache(); 
 echo "<p style=\"clear: left;\"></p>";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+$file = 'stats/kippo_wget.txt';
+
+if ( file_exists($file) ) { 
+	if ( $data = file($file) ) { 
+
+	// FILES
+	echo '<table class="tablefit"><caption>Malicious Remote Files (SSH)</caption><tr><th>Wget Command</th></tr>';
+
+	foreach ($data as $line) {
+
+		list($cmd, $time, $hash) = explode("\t",$line);
+		$ip = trim($cmd);
+		
+			echo '
+			<tr>
+			<td><div class="tdlight">';
+			$wget = htmlentities($cmd, ENT_QUOTES);
+			//$urlfile1 = str_replace ( '%3A%2F%2F' , '://', $urlfile );
+			//echo str_replace ( '%2F' , '/', $urlfile1 );
+			echo $wget . '</div></td></tr>';
+		}
+	echo '</table>';
+	} else { echo 'Could not read file:'.$file; }
+} else { echo "no file: ".$file;
+}
+clearstatcache(); 
+echo "<p style=\"clear: left;\"></p>";
+
+
+
+
+
+
 ?>
 <p><a href="#home">^ Top</a></p>
 </div>
-
