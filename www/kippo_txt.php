@@ -1,17 +1,20 @@
-  <label class="collapse" for="_2">&darr;&darr;&darr; SSH (click to expand)</label>
-  <input id="_2" type="checkbox" />
-  
-  
-<div class="stats">
+<h1>SSH</h1>
+<button onclick="document.getElementById('kippo_top15userpass').style.display='block'" class="w3-btn">kippo_top15userpass</button>
+
+<div id="kippo_top15userpass" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('kippo_top15userpass').style.display='none'" class="w3-closebtn">×</span>
 
 <?php
 $file = 'stats/kippo_top15userpass.txt';
 
-if ( file_exists($file) ) { 
-	if ( $data = file($file) ) { 
+if ( file_exists($file) ) {
+
+$data = file($file) or die('Could not read file!');
 
 // TOP 15 user pass
-echo '<table class="tablefit"><caption>TOP 15 USER+PASS</caption><tr><th>Count</th><th>Username</th><th>Password</th></tr>';
+echo '<table class="tablefit w3-table-all w3-hoverable w3-responsible w3-centerd"><caption>TOP 15 USER+PASS</caption><tr><th>Count</th><th>Username</th><th>Password</th></tr>';
 
 foreach ($data as $line) {
 
@@ -27,30 +30,33 @@ foreach ($data as $line) {
         echo "</tr>";
 }
 echo "</table>";
-	} else { echo 'Could not read file:'.$file; }
-} else { echo "no file: ".$file; }
-clearstatcache(); 
-echo "<p style=\"clear: left;\"></p>";
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+} 
+?>
 
+    </div>
+  </div>
+</div>  
+  
+<button onclick="document.getElementById('kippo_top20successlogin').style.display='block'" class="w3-btn">kippo_top20successlogin</button>
 
+<div id="kippo_top20successlogin" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('kippo_top20successlogin').style.display='none'" class="w3-closebtn">×</span>
 
-
-
-
-
-
-
-
-
-
+<?php
 
 $file = 'stats/kippo_top20successlogin.txt';
 
-if ( file_exists($file) ) { 
-	if ( $data = file($file) ) { 
+if ( file_exists($file) ) {
+
+$data = file($file) or die('Could not read file!');
 
 // TOP 20 successful login IPs 
-echo '<table class="tablefit"><caption>TOP 20 SUCCESSFUL LOGIN IPs</caption><tr><th>Count</th><th colspan="2">Source</th></tr>';
+echo '<table class="tablefit w3-table-all w3-hoverable w3-responsible w3-centerd"><caption>TOP 20 SUCCESSFUL LOGIN IPs</caption><tr><th>Count</th><th colspan="2">Source</th></tr>';
 
 foreach ($data as $line) {
         list($count, $ip) = explode("\t",$line);
@@ -65,20 +71,26 @@ foreach ($data as $line) {
 	echo "</tr>";
 }
 echo "</table>";
-	} else { echo 'Could not read file:'.$file; }
-} else { echo "no file: ".$file;
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
 }
-clearstatcache(); 
-echo "<p style=\"clear: left;\"></p>";
 
 
+?>
 
+    </div>
+  </div>
+</div>  
+  
+<button onclick="document.getElementById('kippo_top20ip').style.display='block'" class="w3-btn">kippo_top20ip</button>
 
+<div id="kippo_top20ip" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('kippo_top20ip').style.display='none'" class="w3-closebtn">×</span>
 
-
-
-
-
+<?php
 
 
 
@@ -86,11 +98,12 @@ echo "<p style=\"clear: left;\"></p>";
 
 $file = 'stats/kippo_top20ip.txt';
 
-if ( file_exists($file) ) { 
-	if ( $data = file($file) ) { 
+if ( file_exists($file) ) {
+
+$data = file($file) or die('Could not read file!');
 
 // TOP 20 IPs
-echo '<table class="tablefit"><caption>TOP 20 attackers</caption><tr><th>Connections</th><th colspan="2">Source</th></tr>';
+echo '<table class="tablefit w3-table-all w3-hoverable w3-responsible w3-centerd"><caption>TOP 20 attackers</caption><tr><th>Connections</th><th colspan="2">Source</th></tr>';
 
 foreach ($data as $line) {
 
@@ -106,38 +119,36 @@ foreach ($data as $line) {
         echo "</tr>";
 }
 echo "</table>";
-	} else { echo 'Could not read file:'.$file; }
-} else { echo "no file: ".$file;
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
 }
-clearstatcache(); 
-echo "<p style=\"clear: left;\"></p>";
 
 
+?>
 
+    </div>
+  </div>
+</div>  
+  
+<button onclick="document.getElementById('kippo_last20sess').style.display='block'" class="w3-btn">kippo_last20sess</button>
 
+<div id="kippo_last20sess" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('kippo_last20sess').style.display='none'" class="w3-closebtn">×</span>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<?php
 
 
 $file = 'stats/kippo_last20sess.txt';
 
-if ( file_exists($file) ) { 
-	if ( $data = file($file) ) { 
+if ( file_exists($file) ) {
+
+$data = file($file) or die('Could not read file!');
 
 // Last 20 sessions
-echo '<table class="tablefit"><caption>Last 20 sessions</caption><tr><th>Date</th><th colspan="2">Source</th></tr>';
+echo '<table class="tablefit w3-table-all w3-hoverable w3-responsible w3-centerd"><caption>Last 20 sessions</caption><tr><th>Date</th><th colspan="2">Source</th></tr>';
 
 foreach ($data as $line) {
 
@@ -155,25 +166,31 @@ foreach ($data as $line) {
 	echo "</tr>";
 }
 echo "</table>";
-	} else { echo 'Could not read file:'.$file; }
-} else { echo "no file: ".$file;
-}
-clearstatcache(); 
-echo "<p style=\"clear: left;\"></p>";
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
+}?>
 
+    </div>
+  </div>
+</div>  
+  
+<button onclick="document.getElementById('kippo_last50commands').style.display='block'" class="w3-btn">kippo_last50commands</button>
 
+<div id="kippo_last50commands" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('kippo_last50commands').style.display='none'" class="w3-closebtn">×</span>
 
-
-
-
-
+<?php
 
 $file = 'stats/kippo_last50commands.txt';
 
-if ( file_exists($file) ) { 
-	if ( $data = file($file) ) { 
+if ( file_exists($file) ) {
 
-echo '<table class="tablefit"><caption>Last 50 commands executed</caption><tr><th>Date</th><th>Command</th><th colspan="2">Source</th></tr>';
+$data = file($file) or die('Could not read file!');
+
+echo '<table class="tablefit w3-table-all w3-hoverable w3-responsible w3-centerd"><caption>Last 50 commands executed</caption><tr><th>Date</th><th>Command</th><th colspan="2">Source</th></tr>';
 
 foreach ($data as $line) {
 
@@ -191,16 +208,13 @@ echo "</td>";
 	echo "</tr>";
 }
 echo '</table>';
-	} else { echo 'Could not read file:'.$file; }
-} else { echo "no file: ".$file;
+	clearstatcache();
+} else {
+	echo "Could not read file: ".$file;
 }
-clearstatcache(); 
-echo "<p style=\"clear: left;\"></p>";
-
-
-
-
 
 ?>
-<p><a href="#home">^ Top</a></p>
-</div>
+
+    </div>
+  </div>
+</div>  

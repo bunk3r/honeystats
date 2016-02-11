@@ -25,6 +25,280 @@ $gi = geoip_open("geoip/GeoIP.dat",GEOIP_STANDARD);
 	<!--[if lt IE 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
 	<![endif]-->
+		<style>
+		* {
+		  margin: 0;
+		  padding: 0;
+		}
+
+		li {
+		  list-style: none;
+		}
+
+		a {
+		  color: #005B9C;
+		}
+
+		img {
+		  border: 0;
+		}
+
+		p {
+		  margin-bottom: 5px;
+		}
+
+		h1,
+		h2 {
+		  font: bold 110%  'Open Sans', sans-serif;
+		  color: #005B9C;
+		  text-transform: uppercase;
+		  margin-bottom: 10px;
+		}
+
+		body {
+		  background-color: #454545;
+		  color: #333;
+		  font: normal 90%  'Open Sans', sans-serif;
+		  line-height: 1;
+		}
+
+		.page-container {
+		  position: relative;
+		  width: 740px;
+		  margin: auto;
+		  padding: 0;
+		}
+
+		header,
+		section,
+		nav {
+		  padding: 10px;
+		  margin-bottom: 12px;
+		}
+
+		header,
+		section {
+		  overflow: hidden;
+		  border-radius: 6px 6px 6px 6px;
+		  box-shadow: 6px 6px 6px #262626;
+		}
+
+		header,
+		nav {
+		  clear: both;
+		  /* no float around */
+		}
+
+		header {
+		  top: 50px;
+		  background-color: #365d95;
+		  /* logo background */
+		  background-image: url('img/ethicalhackprofile.png');
+		  background-repeat: no-repeat;
+		  background-position: bottom right;
+		  margin-top: 12px;
+		}
+	
+		header p {
+			color: #ffffff;
+			font: normal 100% 'Play', sans-serif;
+			text-decoration: none;
+			text-shadow: 2px 2px #454545;
+			text-align: left;
+		}
+		header a.logo {
+		  color: #ffffff;
+		  font: bold 200%  'Play', sans-serif;
+		  text-decoration: none;
+		  text-transform: uppercase;
+		}
+		a.to_nav {
+		  float: right;
+		  border: 1px solid #ffffff;
+		  border-radius: 6px;
+		  /*background-color: #365d95;*/
+		  color: #ffffff;
+		  font: bold 100%  'Play', sans-serif;
+		  text-decoration: none;
+		  text-align: center;
+		  text-transform: uppercase;
+		  width: 48px;
+		  height: 48px;
+		  min-height: 48px;
+		  line-height: 48px;
+		  margin-left: 20px;
+		}
+
+		a.lang {
+		  float: right;
+		  border: 1px solid #ffffff;
+		  border-radius: 6px;
+		  /*background-color: #365d95;*/
+		  color: #ffffff;
+		  font: bold 100%  'Play', sans-serif;
+		  text-decoration: none;
+		  text-align: center;
+		  text-transform: uppercase;
+		  width: 48px;
+		  height: 48px;
+		  min-height: 48px;
+		  line-height: 48px;
+		  margin-left: 10px;
+		}
+
+		nav {
+		  display: block;
+		}
+
+		nav ul {
+		  list-style: none;
+		}
+
+		nav li {
+		  display: inline;
+		}
+
+		.menuf li {
+		  display: block;
+		}
+
+		.menu {
+		  margin-bottom: 12px;
+		}
+
+		.menu  ul {
+		  list-style: none;
+		}
+
+		.menu  a {
+		  border-radius: 6px;
+		  padding: 5px 10px 5px 10px;
+		  background-color: #365d95;
+		  color: #ffffff;
+		  font: bold 100%  'Play', sans-serif;
+		  text-decoration: none;
+		  text-align: center;
+		  text-transform: uppercase;
+		  box-shadow: 6px 6px 6px #262626;
+		}
+
+		.menu li {
+		  display: inline;
+		}
+
+		.menuf {
+		  display: block;
+		  margin-bottom: 12px;
+		}
+
+		.menuf  ul {
+		  list-style: none;
+		}
+
+		.menuf  a {
+		  box-shadow: 6px 6px 6px #262626;
+		  border-radius: 6px;
+		  padding: 5px 10px 5px 10px;
+		  background-color: #365d95;
+		  color: #ffffff;
+		  font: bold 100%  'Play', sans-serif;
+		  text-decoration: none;
+		  text-align: left;
+		  display: block;
+		  text-transform: uppercase;
+		  min-height: 48px;
+		  line-height: 48px;
+		}
+
+		.menuf li {
+		  border-bottom: 1px solid #262626;
+		}
+
+		section {
+		  background-color: #d1d1d1;
+		  color: #000;
+		  font: normal 100%  'Open Sans', sans-serif;
+		}
+
+		.article {
+		  background-color: #FFF;
+		  line-break: strict;
+		  overflow: hidden;
+		  border-radius: 6px 6px 6px 6px;
+		  padding: 12px;
+		  margin-bottom: 12px;
+		}
+
+		.article li {
+		  list-style-type: disc;
+		  list-style-position: inside;
+		}
+
+		.article ul {
+		  padding: 8px;
+		}
+
+		@media only screen and (max-width: 360px) {
+		  .menu {
+			display: none;
+		  }
+
+		  .page-container {
+			position: relative;
+			width: auto;
+			margin: 0;
+			padding: 0;
+		  }
+		}
+
+		@media only screen and (min-width: 361px) and (max-width: 768px) {
+		  .menu {
+			display: none;
+		  }
+
+		  .page-container {
+			position: relative;
+			width: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 0;
+		  }
+		}
+
+		@media only screen and (min-width: 768px) and (max-width: 1024px) {
+		  .page-container {
+			position: relative;
+			width: 740px;
+			margin: auto;
+			padding: 0;
+		  }
+
+		  .menuf {
+			display: none;
+		  }
+
+		  .to_nav {
+			display: none;
+		  }
+		}
+
+		@media only screen and (min-width: 1025px) {
+		  .page-container {
+			position: relative;
+			width: 900px;
+			margin: auto;
+			padding: 0;
+		  }
+
+		  .menuf {
+			display: none;
+		  }
+
+		  .to_nav {
+			display: none;
+		  }
+		}
+	</style>
 </head>
 
 <body id="home">
@@ -43,19 +317,22 @@ $gi = geoip_open("geoip/GeoIP.dat",GEOIP_STANDARD);
 	</nav>
 	
 	<section>
-<article>
+	
+	
+	
+<div class="article">
 	<h1>HONEYSTATS - Honeypot Statistics</h1>
 	<p>This area is still under development! Please be patient as we iron out the bugs!</p>
-</article>
+</div>
 
-<article>		
+<div class="article">
 	<h2>Live Dictionaries</h2>
 	<ul>
 		<li><a href="stats/live_dict.txt.tar.gz" target="_blank">live_dict.txt.tar.gz</a> (updated: <?php echo date ("F d Y H:i:s", filemtime('stats/live_dict.txt.tar.gz')); ?>)</li>
 		<li><a href="stats/live_users.txt" target="_blank">live_users.txt</a> (updated: <?php echo date ("F d Y H:i:s", filemtime('stats/live_users.txt')); ?>)</li>
 		<li><a href="stats/live_userpass_dict.txt.tar.gz" target="_blank">live_userpass_dict.txt.tar.gz</a> (updated: <?php echo date ("F d Y H:i:s", filemtime('stats/live_userpass_dict.txt.tar.gz')); ?>)</li>
 	</ul>
-</article>
+</div>
 
 
 <p>Honeypot stats below:</p>
@@ -66,15 +343,15 @@ $gi = geoip_open("geoip/GeoIP.dat",GEOIP_STANDARD);
 
 
 
-<article>
+<div class="article">
 		<?php include_once "glastopf_txt.php"; ?>
-</article>
-<article>
+</div>
+<div class="article">
 		<?php include_once "kippo_txt.php"; ?>
-</article>
-<article>
+</div>
+<div class="article">
 		<?php include_once "mfiles_txt.php"; ?>
-</article>
+</div>
 		
 		
 		
@@ -122,8 +399,12 @@ $gi = geoip_open("geoip/GeoIP.dat",GEOIP_STANDARD);
 geoip_close($gi);
 			
 ?>
-
+	<link rel="stylesheet" type="text/css" property="stylesheet" id="honeystats-css" href="honeystats.css" title="honeystats" />
+	<link rel="stylesheet prefetch" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css" property="stylesheet prefetch"  />
+	<link rel="stylesheet prefetch" href="http://fonts.googleapis.com/css?family=Play:400,700" type="text/css" property="stylesheet prefetch" />
+	<link rel="stylesheet prefetch" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" property="stylesheet prefetch"  />
 </body>
+
 </html>		
 				
   	
