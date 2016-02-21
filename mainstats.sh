@@ -24,7 +24,7 @@ hs_select 'glastopf' 'mfiles.txt' "SELECT LEFT (source, LOCATE (':', source)-1) 
 #
 # KIPPO WGET
 #
-hs_select 'kippo' 'kippo_wget.txt' "SELECT DISTINCT(input) FROM input WHERE input LIKE '%wget%' AND input NOT LIKE 'wget' ORDER BY timestamp DESC"
+hs_select 'kippo' 'kippo_wget.txt' "SELECT DISTINCT(input) FROM input WHERE input LIKE '%wget %' OR input LIKE '%curl %' ORDER BY timestamp DESC"
 
 #
 # KIPPO TOP 20 IP
